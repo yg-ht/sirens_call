@@ -4,6 +4,8 @@
 
 Sirens Call is a command-line analysis tool that parses .js and .mjs files in a given project and emits Mermaid.js flowcharts representing the function execution paths—particularly for Commander.js CLI commands. It is ideal for static code reviewers, reverse engineers, and CLI maintainers seeking visual insight into execution logic. When this functionality was needed there appeared to be very little out there that actually did this with modern depenencies, outputting mermaid syntax, and could cope with `commander` style CLI-based entry points.
 
+See the blog post about this tool at [You Gotta Hack That](https://yougottahackthat.com/insights/sirens-call-visualise-your-code-with-mermaid).
+
 ## 🎞️ Features ##
 
 - 🎯 Identifies distinct execution entry points (e.g., Commander.js .command(...).action(...))
@@ -24,6 +26,8 @@ This tool is best run inside a pipenv environment.
 Run sirens_call.py from within the pipenv and point it at a target directory:
 
 ```pipenv run python sirens_call.py -o <prefix> [--verbose] [--debug-graph] [--nopreview] <target project directory>```
+
+Then take the contents of the .mermaid file and paste this into [Mermaid Live](https://mermaid.live) to generate a graph.
 
 ### Required Arguments ###
 
